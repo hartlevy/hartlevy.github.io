@@ -92,21 +92,21 @@
   </body>
   <script>
   function getConfigData() {
-  //  var secondColorList = document.getElementById('second_select');
+    var secondColorList = document.getElementById('second_select');
    // var minuteColorList = document.getElementById('minute_select');
    // var hourColorList = document.getElementById('hour_select');
     //var tempScaleList = document.getElementById('temp_select');
     var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
  
     var options = {
-      //'second_color': secondColorList.options[secondColorList.selectedIndex].value,
+      'second_color': secondColorList.options[secondColorList.selectedIndex].value,
      // 'minute_color': minuteColorList.options[minuteColorList.selectedIndex].value,
       //'hour_color': hourColorList.options[hourColorList.selectedIndex].value,
      // 'temp_scale': tempScaleList.options[tempScaleList.selectedIndex].value,
       'hide_seconds': hideSecondsCheckbox.checked
     };
     // Save for next launch
-   // localStorage['second_color']: = options['second_color'];
+    localStorage['second_color']: = options['second_color'];
    // localStorage['minute_color']: = options['minute_color'];
    // localStorage['hour_color']: = options['hour_color'];
   //  localStorage['temp_scale'] = options['temp_scale'];
@@ -137,7 +137,7 @@
   });
 
   (function() {
-   // var secondColorList = document.getElementById('second_select');
+    var secondColorList = document.getElementById('second_select');
    // var minuteColorList = document.getElementById('minute_select');
   //  var hourColorList = document.getElementById('hour_select');
   //  var tempScaleList = document.getElementById('temp_select');
@@ -146,7 +146,7 @@
     // Load any previously saved configuration, if available
     if(localStorage['hide_seconds']) {
       hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds']);
-     // secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
+      secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
    //   hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
    //   minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
  //     tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
