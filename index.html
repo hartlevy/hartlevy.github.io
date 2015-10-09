@@ -55,13 +55,13 @@
         </label>
         <label class="item">
           Second Hand
-          <select id='second_select' name="select-3" dir='rtl' class="item-select">
+          <select id='secondselect' name="select-3" dir='rtl' class="item-select">
             <option class="item-select-option" value="0" >White</option>
             <option class="item-select-option" value="1" selected>Red</option>
             <option class="item-select-option" value="2">Blue</option>
-	    <option class="item-select-option" value="3">Green</option>
-	    <option class="item-select-option" value="4">Yellow</option>
-	    <option class="item-select-option" value="5">Purple</option>
+	        <option class="item-select-option" value="3">Green</option>
+	        <option class="item-select-option" value="4">Yellow</option>
+	        <option class="item-select-option" value="5">Purple</option>
           </select>
         </label>
       </div>
@@ -74,9 +74,9 @@
           Hide Seconds
           <input id='hide_seconds_checkbox' type='checkbox' class='item-toggle'>
         </label>
-      	<label class="item">
-        Temperature Scale
-        <select id='temp_select' name="select-4" dir='rtl' class="item-select">
+      	<label class='item'>
+          Temperature Scale
+          <select id='temp_select' name="select-4" dir='rtl' class="item-select">
           <option class="item-select-option" value="0">Celsius</option>
           <option class="item-select-option" value="1" selected>Fahrenheit</option>
         </select>
@@ -92,24 +92,25 @@
   </body>
   <script>
   function getConfigData() {
-    var secondColor = $(#second_select option:selected).value;
-   // var minuteColorList = document.getElementById('minute_select');
-   // var hourColorList = document.getElementById('hour_select');
-    //var tempScaleList = document.getElementById('temp_select');
+    //var secondColor = $('#secondselect option').filter(":selected").value;
+    var secondColor = document.getElementById('secondselect').selectedOptions[0].value;
+    var minuteColor = document.getElementById('minute_select').selectedOptions[0].value;
+    var hourColor = document.getElementById('hour_select').selectedOptions[0].value;
+    var tempScale = document.getElementById('temp_select').selectedOptions[0].value;
     var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
  
     var options = {
       'second_color': secondColor,
-     // 'minute_color': minuteColorList.options[minuteColorList.selectedIndex].value,
-      //'hour_color': hourColorList.options[hourColorList.selectedIndex].value,
-     // 'temp_scale': tempScaleList.options[tempScaleList.selectedIndex].value,
+      'minute_color': minuteColor,
+      'hour_color': hourColor,
+      'temp_scale': tempScale,
       'hide_seconds': hideSecondsCheckbox.checked
     };
     // Save for next launch
-    localStorage['second_color']: = options['second_color'];
-   // localStorage['minute_color']: = options['minute_color'];
-   // localStorage['hour_color']: = options['hour_color'];
-  //  localStorage['temp_scale'] = options['temp_scale'];
+    localStorage['second_color'] = options['second_color'];
+    localStorage['minute_color'] = options['minute_color'];
+    localStorage['hour_color'] = options['hour_color'];
+    localStorage['temp_scale'] = options['temp_scale'];
     localStorage['hide_seconds'] = options['hide_seconds'];
     console.log('Got options: ' + JSON.stringify(options));
     return options;
@@ -137,19 +138,19 @@
   });
 
   (function() {
-    var secondColor = $(#second_select option:selected).value;   
-   // var minuteColorList = document.getElementById('minute_select');
-  //  var hourColorList = document.getElementById('hour_select');
-  //  var tempScaleList = document.getElementById('temp_select');
+    var secondColorList = document.getElementById('secondselect');
+    var minuteColorList = document.getElementById('minute_select');
+    var hourColorList = document.getElementById('hour_select');
+    var tempScaleList = document.getElementById('temp_select');
     var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
 
     // Load any previously saved configuration, if available
     if(localStorage['hide_seconds']) {
       hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds']);
-    //  secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
-   //   hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
-   //   minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
- //     tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
+      secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
+      hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
+      minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
+      tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
     }
   })();
   </script>
