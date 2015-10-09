@@ -40,6 +40,8 @@
 	    <option class="item-select-option" value="3">Green</option>
 	    <option class="item-select-option" value="4">Yellow</option>
 	    <option class="item-select-option" value="5">Purple</option>
+	    <option class="item-select-option" value="6">Cyan</option>
+	    <option class="item-select-option" value="7">Orange</option>	    	    
           </select>
         </label>
         <label class="item">
@@ -51,6 +53,8 @@
 	    <option class="item-select-option" value="3">Green</option>
 	    <option class="item-select-option" value="4">Yellow</option>
 	    <option class="item-select-option" value="5">Purple</option>
+	    <option class="item-select-option" value="6">Cyan</option>
+	    <option class="item-select-option" value="7">Orange</option>		    
           </select>
         </label>
         <label class="item">
@@ -62,6 +66,8 @@
 	        <option class="item-select-option" value="3">Green</option>
 	        <option class="item-select-option" value="4">Yellow</option>
 	        <option class="item-select-option" value="5">Purple</option>
+	    	<option class="item-select-option" value="6">Cyan</option>
+	    	<option class="item-select-option" value="7">Orange</option>		        
           </select>
         </label>
       </div>
@@ -74,6 +80,14 @@
           Hide Seconds
           <input id='hide_seconds_checkbox' type='checkbox' class='item-toggle'>
         </label>
+        <label class='item'>
+          Show Startup Animation
+          <input id='animation_checkbox' type='checkbox' class='item-toggle'>
+        </label>
+        <label class='item'>
+          Use Large Bluetooth Logo
+          <input id='bt_logo_checkbox' type='checkbox' class='item-toggle'>
+        </label>        
       	<label class='item'>
           Temperature Scale
           <select id='temp_select' name="select-4" dir='rtl' class="item-select">
@@ -98,13 +112,18 @@
     var hourColor = document.getElementById('hour_select').selectedOptions[0].value;
     var tempScale = document.getElementById('temp_select').selectedOptions[0].value;
     var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
+    var bigBtLogo= document.getElementById('bt_logo_checkbox');
+    var showAnimation = document.getElementById('animation_checkbox');
+    
  
     var options = {
       'second_color': secondColor,
       'minute_color': minuteColor,
       'hour_color': hourColor,
       'temp_scale': tempScale,
-      'hide_seconds': hideSecondsCheckbox.checked
+      'hide_seconds': hideSecondsCheckbox.checked?1:0,
+      'bt_logo': bigBtLogo.checked?1:0,
+      'show_animation': showAnimation.checked?1:0      
     };
     // Save for next launch
     localStorage['second_color'] = options['second_color'];
@@ -112,6 +131,8 @@
     localStorage['hour_color'] = options['hour_color'];
     localStorage['temp_scale'] = options['temp_scale'];
     localStorage['hide_seconds'] = options['hide_seconds'];
+    localStorage['bt_logo'] = options['bt_logo'];
+    localStorage['show_animation'] = options['show_animation'];    
     console.log('Got options: ' + JSON.stringify(options));
     return options;
   }
@@ -143,14 +164,19 @@
     var hourColorList = document.getElementById('hour_select');
     var tempScaleList = document.getElementById('temp_select');
     var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
-
+    var bigBtLogo= document.getElementById('bt_logo_checkbox');
+    var showAnimation = document.getElementById('animation_checkbox');
+    
     // Load any previously saved configuration, if available
     if(localStorage['hide_seconds']) {
-      hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds']);
+      hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds'])==1;
       secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
       hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
       minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
       tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
+      bigBtLogo.checked = JSON.parse(localStorage['bt_logo'])==1;
+      showAnimation.checked = JSON.parse(localStorage['show_animation'])==1;
+      
     }
   })();
   </script>
