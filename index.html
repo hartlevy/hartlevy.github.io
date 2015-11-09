@@ -1,183 +1,233 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>PixelGrid Configuration</title>
-  <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
-  <script src='js/slate.min.js'></script>
-  <style>
-  .title {
-    padding: 15px 10px;
-    text-transform: uppercase;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #888888;
-    text-align: center;
-  }
-  </style>
-  </head>
+	<head>
+		<title>PixelGrid Configuration</title>
+		<link rel='stylesheet' type='text/css' href='css/slate.min.css'>
+		<script src='js/slate.min.js'></script>
+		<style>
+			.title {
+				padding: 15px 10px;
+				text-transform: uppercase;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 1.2em;
+				font-weight: 500;
+				color: #888888;
+				text-align: center;
+			}
+		</style>
+	</head>
 
-  <body>
-    <h1 class='title'>PixelGrid Configuration</h1>
+	<body>
+		<h1 class='title'>PixelGrid Configuration</h1>
 
-    <!--div class='item-container'>
-      <div class='item-container-content'>
-        <div class='item'>
-          Use this configuration page to choose the settings you would like applied to this app.
-        </div>
-      </div>
-    </div-->
+		<!--div class='item-container'>
+		<div class='item-container-content'>
+		<div class='item'>
+		Use this configuration page to choose the settings you would like applied to this app.
+		</div>
+		</div>
+		</div-->
 
-    <div class='item-container'>
-      <div class='item-container-header'>Colors</div>
-      <div class='item-container-content'>
-        <label class="item">
-          Hour Hand
-          <select id='hour_select' name="select-1" dir='rtl' class="item-select">
-            <option class="item-select-option" value="0" selected>White</option>
-            <option class="item-select-option" value="1" >Red</option>
-            <option class="item-select-option" value="2">Blue</option>
-	    <option class="item-select-option" value="3">Green</option>
-	    <option class="item-select-option" value="4">Yellow</option>
-	    <option class="item-select-option" value="5">Purple</option>
-	    <option class="item-select-option" value="6">Cyan</option>
-	    <option class="item-select-option" value="7">Orange</option>	    	    
-          </select>
-        </label>
-        <label class="item">
-          Minute Hand
-          <select id='minute_select' name="select-2" dir='rtl' class="item-select">
-            <option class="item-select-option" value="0" selected>White</option>
-            <option class="item-select-option" value="1" >Red</option>
-            <option class="item-select-option" value="2">Blue</option>
-	    <option class="item-select-option" value="3">Green</option>
-	    <option class="item-select-option" value="4">Yellow</option>
-	    <option class="item-select-option" value="5">Purple</option>
-	    <option class="item-select-option" value="6">Cyan</option>
-	    <option class="item-select-option" value="7">Orange</option>		    
-          </select>
-        </label>
-        <label class="item">
-          Second Hand
-          <select id='secondselect' name="select-3" dir='rtl' class="item-select">
-            <option class="item-select-option" value="0" >White</option>
-            <option class="item-select-option" value="1" selected>Red</option>
-            <option class="item-select-option" value="2">Blue</option>
-	        <option class="item-select-option" value="3">Green</option>
-	        <option class="item-select-option" value="4">Yellow</option>
-	        <option class="item-select-option" value="5">Purple</option>
-	    	<option class="item-select-option" value="6">Cyan</option>
-	    	<option class="item-select-option" value="7">Orange</option>		        
-          </select>
-        </label>
-      </div>
-    </div>
+		<div class='item-container'>
+			<div class='item-container-header'>
+				Colors
+			</div>
+			<div class='item-container-content'>
+				<label class="item"> Hour Hand
+					<select id='hour_select' name="select-1" dir='rtl' class="item-select">
+						<option class="item-select-option" value="0" selected>White</option>
+						<option class="item-select-option" value="1" >Red</option>
+						<option class="item-select-option" value="2">Blue</option>
+						<option class="item-select-option" value="3">Green</option>
+						<option class="item-select-option" value="4">Yellow</option>
+						<option class="item-select-option" value="5">Purple</option>
+						<option class="item-select-option" value="6">Cyan</option>
+						<option class="item-select-option" value="7">Orange</option>
+					</select> 
+				</label>
+				<label class="item"> Minute Hand
+					<select id='minute_select' name="select-2" dir='rtl' class="item-select">
+						<option class="item-select-option" value="0" selected>White</option>
+						<option class="item-select-option" value="1" >Red</option>
+						<option class="item-select-option" value="2">Blue</option>
+						<option class="item-select-option" value="3">Green</option>
+						<option class="item-select-option" value="4">Yellow</option>
+						<option class="item-select-option" value="5">Purple</option>
+						<option class="item-select-option" value="6">Cyan</option>
+						<option class="item-select-option" value="7">Orange</option>
+					</select> 
+				</label>
+				<label class="item"> Second Hand
+					<select id='secondselect' name="select-3" dir='rtl' class="item-select">
+						<option class="item-select-option" value="0" >White</option>
+						<option class="item-select-option" value="1" selected>Red</option>
+						<option class="item-select-option" value="2">Blue</option>
+						<option class="item-select-option" value="3">Green</option>
+						<option class="item-select-option" value="4">Yellow</option>
+						<option class="item-select-option" value="5">Purple</option>
+						<option class="item-select-option" value="6">Cyan</option>
+						<option class="item-select-option" value="7">Orange</option>
+					</select> 
+				</label>
+			</div>
+		</div>
 
-    <div class='item-container'>
-      <div class='item-container-header'>Options</div>
-      <div class='item-container-content'>
-        <label class='item'>
-          Hide Seconds
-          <input id='hide_seconds_checkbox' type='checkbox' class='item-toggle'>
-        </label>
-        <label class='item'>
-          Show Startup Animation
-          <input id='animation_checkbox' type='checkbox' class='item-toggle'>
-        </label>
-        <label class='item'>
-          Use Large Bluetooth Logo
-          <input id='bt_logo_checkbox' type='checkbox' class='item-toggle'>
-        </label>        
-      	<label class='item'>
-          Temperature Scale
-          <select id='temp_select' name="select-4" dir='rtl' class="item-select">
-          <option class="item-select-option" value="0">Celsius</option>
-          <option class="item-select-option" value="1" selected>Fahrenheit</option>
-        </select>
-       </label>
-      </div>
-    </div>
-
-    <div class='item-container'>
-      <div class='button-container'>
-        <input id='submit_button' type='button' class='item-button' value='SUBMIT'>
-      </div>
-    </div>
-  </body>
-  <script>
-  function getConfigData() {
-    //var secondColor = $('#secondselect option').filter(":selected").value;
-    var secondColor = document.getElementById('secondselect').selectedOptions[0].value;
-    var minuteColor = document.getElementById('minute_select').selectedOptions[0].value;
-    var hourColor = document.getElementById('hour_select').selectedOptions[0].value;
-    var tempScale = document.getElementById('temp_select').selectedOptions[0].value;
-    var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
-    var bigBtLogo= document.getElementById('bt_logo_checkbox');
-    var showAnimation = document.getElementById('animation_checkbox');
-    
- 
-    var options = {
-      'second_color': secondColor,
-      'minute_color': minuteColor,
-      'hour_color': hourColor,
-      'temp_scale': tempScale,
-      'hide_seconds': hideSecondsCheckbox.checked?1:0,
-      'bt_logo': bigBtLogo.checked?1:0,
-      'show_animation': showAnimation.checked?1:0      
-    };
-    // Save for next launch
-    localStorage['second_color'] = options['second_color'];
-    localStorage['minute_color'] = options['minute_color'];
-    localStorage['hour_color'] = options['hour_color'];
-    localStorage['temp_scale'] = options['temp_scale'];
-    localStorage['hide_seconds'] = options['hide_seconds'];
-    localStorage['bt_logo'] = options['bt_logo'];
-    localStorage['show_animation'] = options['show_animation'];    
-    console.log('Got options: ' + JSON.stringify(options));
-    return options;
-  }
+		<div class='item-container'>
+			<div class='item-container-header'>
+				Display Options
+			</div>
+			<div class='item-container-content'>
+				<label class='item'> Hide Seconds
+					<input id='hide_seconds_checkbox' type='checkbox' class='item-toggle'>
+				</label>
+				<label class='item'> Show Startup Animation
+					<input id='animation_checkbox' type='checkbox' class='item-toggle'>
+				</label>
+				<label class='item'> Use Large Bluetooth Logo
+					<input id='bt_logo_checkbox' type='checkbox' class='item-toggle'>
+				</label>
+				<label class='item'> Use Square Face (square watches only)
+					<input id='square_checkbox' type='checkbox' class='item-toggle'>
+				</label>
+				<label class="item"> Date Format
+					<select id='date_select' name="select-1" dir='rtl' class="item-select">
+						<option class="item-select-option" value="0" selected>DD/MM</option>
+						<option class="item-select-option" value="1" >MM/DD</option>
+					</select> 
+				</label>	
+			</div>
+		</div>
+		<div class="item-container">
+			<div class="item-container-header">
+				Temperature
+			</div>
+			<div class='item-container-content'>	
+				<label class='item'> Scale
+					<select id='temp_select' name="select-4" dir='rtl' class="item-select">
+						<option class="item-select-option" value="0">Celsius</option>
+						<option class="item-select-option" value="1" selected>Fahrenheit</option>
+					</select> </label>
+				<label class='item'> Update Period
+					<div class="item-container-content">
+						<div class="item tab-buttons" id='temp_update'>
+							<a name="tab-1" class="tab-button" value="0">Disabled</a>
+							<a name="tab-1" class="tab-button active" value="1">30 min</a>
+							<a name="tab-1" class="tab-button" value="2">60 min</a>
+							<a name="tab-1" class="tab-button" value="3">Launch Only</a>
+						</div>
+					</div> 
+				</label>
+			</div>			
+		</div>
 
 
-  function getQueryParam(variable, defaultValue) {
-    var query = location.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split('=');
-      if (pair[0] === variable) {
-        return decodeURIComponent(pair[1]);
-      }
-    }
-    return defaultValue || false;
-  }
- 
-  var submitButton = document.getElementById('submit_button');
-  submitButton.addEventListener('click', function() {
-    console.log('Submit');
-    // Set the return URL depending on the runtime environment
-    var return_to = getQueryParam('return_to', 'pebblejs://close#');
-    document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
-  });
+		<div class='item-container'>
+			<div class='button-container'>
+				<input id='submit_button' type='button' class='item-button' value='SUBMIT'>
+			</div>
+		</div>
+	</body>
+	<script>
+		function getConfigData() {
+			//var secondColor = $('#secondselect option[selected]')[0].value;
+			var secondColor = document.getElementById('secondselect').selectedOptions[0].value;
+			var minuteColor = document.getElementById('minute_select').selectedOptions[0].value;
+			var hourColor = document.getElementById('hour_select').selectedOptions[0].value;
+			var tempScale = document.getElementById('temp_select').selectedOptions[0].value;
+			var hideSecondsCheckbox = document.getElementById('hide_seconds_checkbox');
+			var bigBtLogo = document.getElementById('bt_logo_checkbox');
+			var showAnimation = document.getElementById('animation_checkbox');
+			var square = document.getElementById('square_checkbox');
+			var tempUpdate = $("#temp_update a.active")[0].getAttribute("value");
+			var dateFormat = document.getElementById('date_select').selectedOptions[0].value;
 
-  (function() {
-    var secondColorList = document.getElementById('secondselect');
-    var minuteColorList = document.getElementById('minute_select');
-    var hourColorList = document.getElementById('hour_select');
-    var tempScaleList = document.getElementById('temp_select');
-    var hideSecondsCheckbox= document.getElementById('hide_seconds_checkbox');
-    var bigBtLogo= document.getElementById('bt_logo_checkbox');
-    var showAnimation = document.getElementById('animation_checkbox');
-    
-    // Load any previously saved configuration, if available
-    if(localStorage['hide_seconds']) {
-      hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds'])==1;
-      secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
-      hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
-      minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
-      tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
-      bigBtLogo.checked = JSON.parse(localStorage['bt_logo'])==1;
-      showAnimation.checked = JSON.parse(localStorage['show_animation'])==1;
-      
-    }
-  })();
-  </script>
+
+			var options = {
+				'second_color' : secondColor,
+				'minute_color' : minuteColor,
+				'hour_color' : hourColor,
+				'temp_scale' : tempScale,
+				'hide_seconds' : hideSecondsCheckbox.checked ? 1 : 0,
+				'bt_logo' : bigBtLogo.checked ? 1 : 0,
+				'show_animation' : showAnimation.checked ? 1 : 0,
+				'square' : square.checked ? 1 : 0,
+				'temp_update' : tempUpdate,
+				'date_format' : dateFormat				
+			};
+			// Save for next launch
+			localStorage['second_color'] = options['second_color'];
+			localStorage['minute_color'] = options['minute_color'];
+			localStorage['hour_color'] = options['hour_color'];
+			localStorage['temp_scale'] = options['temp_scale'];
+			localStorage['hide_seconds'] = options['hide_seconds'];
+			localStorage['bt_logo'] = options['bt_logo'];
+			localStorage['show_animation'] = options['show_animation'];
+			localStorage['square'] = options['square'];	
+			localStorage['temp_update'] = options['temp_update'];	
+			localStorage['date_format'] = options['date_format'];						
+			console.log('Got options: ' + JSON.stringify(options));
+			return options;
+		}
+
+		function getQueryParam(variable, defaultValue) {
+			var query = location.search.substring(1);
+			var vars = query.split('&');
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split('=');
+				if (pair[0] === variable) {
+					return decodeURIComponent(pair[1]);
+				}
+			}
+			return defaultValue || false;
+		}
+
+		var submitButton = document.getElementById('submit_button');
+		submitButton.addEventListener('click', function() {
+			console.log('Submit');
+			// Set the return URL depending on the runtime environment
+			var return_to = getQueryParam('return_to', 'pebblejs://close#');
+			document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
+		});
+
+		(function() {
+			var secondColorList = document.getElementById('secondselect');
+			var minuteColorList = document.getElementById('minute_select');
+			var hourColorList = document.getElementById('hour_select');
+			var tempScaleList = document.getElementById('temp_select');
+			var dateFormatList = document.getElementById('date_select');	
+			var hideSecondsCheckbox = document.getElementById('hide_seconds_checkbox');
+			var bigBtLogo = document.getElementById('bt_logo_checkbox');
+			var showAnimation = document.getElementById('animation_checkbox');
+			var square = document.getElementById('square_checkbox');
+			var tempUpdate = document.getElementById('temp_update');
+
+			// Load any previously saved configuration, if available
+			if (localStorage['hide_seconds']) {
+				hideSecondsCheckbox.checked = JSON.parse(localStorage['hide_seconds']) == 1;
+				secondColorList.selectedIndex = JSON.parse(localStorage['second_color']);
+				hourColorList.selectedIndex = JSON.parse(localStorage['hour_color']);
+				minuteColorList.selectedIndex = JSON.parse(localStorage['minute_color']);
+				tempScaleList.selectedIndex = JSON.parse(localStorage['temp_scale']);
+				dateFormatList.selectedIndex = JSON.parse(localStorage['date_format']);				
+				bigBtLogo.checked = JSON.parse(localStorage['bt_logo']) == 1;
+				showAnimation.checked = JSON.parse(localStorage['show_animation']) == 1;
+				square.checked = JSON.parse(localStorage['square']) == 1;				
+			}
+			if (localStorage['temp_update']) {
+				for(var i = 0; i < tempUpdate.children.length; i++){
+					tab = tempUpdate.children[i];
+					if(tab.name == "tab-1"){
+						var value = tab.getAttribute("value");
+	
+						if(value == JSON.parse(localStorage['temp_update'])){
+	            			tab.classList.add('active');
+	          			}
+	          			else{
+	          				tab.classList.remove('active');
+	          			}
+	          		}
+				}						
+			}
+		})();
+	</script>
 </html>
